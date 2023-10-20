@@ -12,12 +12,23 @@ import Foundation
 @MainActor
 class LoginViewModel: ObservableObject {
 
+    @Published var router: Router?
+
+    // MARK: - UI actions
+
+    @Published var showPassword = false
+    @Published var errorMsg = ""
+
+
+    // MARK: - User Inputs
+
     @Published var isLoggedIn = false
     @Published var email = ""
     @Published var password = ""
     @Published var showError = false
 
 
+    // MARK: - Validation
     var areFieldsEmpty: Bool{
         [email,password].contains(where: \.isEmpty)
     }
@@ -29,7 +40,22 @@ class LoginViewModel: ObservableObject {
             return true
         }
 
+    // MARK: - init
+    func setup(_ router: Router) {
+        self.router = router
+     }
+
+    // MARK: - Functions
+    
+    func login() {
+        // TODO: call logoin function
+        self.router?.push(to: .dashboard)
+    }
 
 
+    @MainActor
+    func tapToRegister() {
+        self.router?.push(to: .register)
+    }
 
 }

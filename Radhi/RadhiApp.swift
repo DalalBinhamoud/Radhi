@@ -9,14 +9,32 @@ import SwiftUI
 
 @main
 struct RadhiApp: App {
-    @State private var navigateToHome = false
+    @ObservedObject var router = Router()
 
     @State private var selectedLanguage = "en"
 
     var body: some Scene {
-        WindowGroup {
-            LoginView(navigateToHome: $navigateToHome, selectedLanguage: $selectedLanguage).environment(\.locale, .init(identifier: selectedLanguage))
-                .environment(\.layoutDirection, selectedLanguage == "en" ? .leftToRight:.rightToLeft)
-        }
-    }
+         WindowGroup {
+             NavigationStack(path: $router.navPath) {
+                 LoginView(selectedLanguage: $selectedLanguage)
+                 .navigationDestination(for: Router.Routes.self) { route in
+                     switch route {
+                     case .register:
+                         RegistrationView()
+                     case .login:
+                         LoginView(selectedLanguage: $selectedLanguage)
+                     case .submitReview:
+                         SubmitReviewView()
+                     case .dashboard:
+                         DashboardView()
+                     case .branhces:
+                         Text("Comming Soon!")
+                     }
+                 }
+             }
+             .environmentObject(router)
+             .environment(\.layoutDirection, selectedLanguage == "en" ? .leftToRight :  .rightToLeft)
+             .environment(\.locale, .init(identifier: selectedLanguage))
+         }
+     }
 }

@@ -6,6 +6,7 @@
   
 */
 "brand name" = "Brand Name";
+"displayed_language" = "ع";
 //auth translation
 "email" = "Email";
 "password" = "Password";

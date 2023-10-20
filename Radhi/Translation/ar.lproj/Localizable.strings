@@ -6,6 +6,7 @@
   
 */
 "brand name" = "اسم العلامة التجارية";
+"displayed_language" = "En";
 //auth translation
 "email" = "البريد الإلكتروني";
 "password" = "الرقم السري";

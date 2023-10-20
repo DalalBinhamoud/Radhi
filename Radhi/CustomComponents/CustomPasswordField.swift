@@ -42,7 +42,7 @@ struct CustomPasswordField: View {
 
 
     var body: some View {
-        ZStack(alignment:.leading){
+        ZStack(alignment: .trailing){
 
             Group{
                 if showPassword  {
@@ -53,13 +53,12 @@ struct CustomPasswordField: View {
                         .autocapitalization(.none)
                 }
             }
-
             Button(action: {
                 showPassword.toggle()
             }){
                 Image(systemName: showPassword ? "eye" : "eye.slash").imageScale(.large)
-            }.padding(.left, 25)
-        }.padding([.top])
+            }.padding(.horizontal, 25)
+        }
     }
 
 }
