@@ -11,6 +11,18 @@
 		E487FE712A24880D0046D0FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487FE702A24880D0046D0FB /* ContentView.swift */; };
 		E487FE732A24880E0046D0FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E487FE722A24880E0046D0FB /* Assets.xcassets */; };
 		E487FE762A24880E0046D0FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E487FE752A24880E0046D0FB /* Preview Assets.xcassets */; };
+		E487FE812A2B80160046D0FB /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487FE802A2B80160046D0FB /* RegistrationView.swift */; };
+		E487FE842A2B80510046D0FB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487FE832A2B80510046D0FB /* Constants.swift */; };
+		E487FE872A2B80840046D0FB /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487FE862A2B80840046D0FB /* ColorExtension.swift */; };
+		E487FE892A2B822E0046D0FB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487FE882A2B822E0046D0FB /* LoginView.swift */; };
+		E487FE8D2A2B82B40046D0FB /* CustomEmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487FE8C2A2B82B40046D0FB /* CustomEmailField.swift */; };
+		E487FE8F2A2B82CD0046D0FB /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487FE8E2A2B82CD0046D0FB /* Util.swift */; };
+		E487FE912A2B83730046D0FB /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487FE902A2B83730046D0FB /* TextExtension.swift */; };
+		E487FE932A2B84240046D0FB /* CustomPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487FE922A2B84240046D0FB /* CustomPasswordField.swift */; };
+		E487FE952A2B84A80046D0FB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487FE942A2B84A80046D0FB /* LoginViewModel.swift */; };
+		E487FE972A2B94F80046D0FB /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487FE962A2B94F80046D0FB /* RegistrationViewModel.swift */; };
+		E487FE992A2B95E40046D0FB /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487FE982A2B95E40046D0FB /* Branch.swift */; };
+		E487FEC12A34BA380046D0FB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E487FEC32A34BA380046D0FB /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +31,19 @@
 		E487FE702A24880D0046D0FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E487FE722A24880E0046D0FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E487FE752A24880E0046D0FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E487FE802A2B80160046D0FB /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		E487FE832A2B80510046D0FB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E487FE862A2B80840046D0FB /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		E487FE882A2B822E0046D0FB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E487FE8C2A2B82B40046D0FB /* CustomEmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEmailField.swift; sourceTree = "<group>"; };
+		E487FE8E2A2B82CD0046D0FB /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		E487FE902A2B83730046D0FB /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
+		E487FE922A2B84240046D0FB /* CustomPasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPasswordField.swift; sourceTree = "<group>"; };
+		E487FE942A2B84A80046D0FB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E487FE962A2B94F80046D0FB /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		E487FE982A2B95E40046D0FB /* Branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
+		E487FEC22A34BA380046D0FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E487FEC42A34BA420046D0FB /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +76,13 @@
 		E487FE6D2A24880D0046D0FB /* Radhi */ = {
 			isa = PBXGroup;
 			children = (
+				E487FEBE2A34BA120046D0FB /* Translation */,
+				E487FE8B2A2B829C0046D0FB /* CustomComponents */,
+				E487FE852A2B80680046D0FB /* Extensions */,
+				E487FE822A2B803C0046D0FB /* Helpers */,
+				E487FE7E2A2B7ED40046D0FB /* ViewModels */,
+				E487FE7D2A2B7EA90046D0FB /* Views */,
+				E487FE7C2A2B7E890046D0FB /* Models */,
 				E487FE6E2A24880D0046D0FB /* RadhiApp.swift */,
 				E487FE702A24880D0046D0FB /* ContentView.swift */,
 				E487FE722A24880E0046D0FB /* Assets.xcassets */,
@@ -65,6 +97,75 @@
 				E487FE752A24880E0046D0FB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E487FE7C2A2B7E890046D0FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E487FE982A2B95E40046D0FB /* Branch.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E487FE7D2A2B7EA90046D0FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E487FE8A2A2B82540046D0FB /* AuthViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E487FE7E2A2B7ED40046D0FB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E487FE942A2B84A80046D0FB /* LoginViewModel.swift */,
+				E487FE962A2B94F80046D0FB /* RegistrationViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E487FE822A2B803C0046D0FB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E487FE832A2B80510046D0FB /* Constants.swift */,
+				E487FE8E2A2B82CD0046D0FB /* Util.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E487FE852A2B80680046D0FB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E487FE862A2B80840046D0FB /* ColorExtension.swift */,
+				E487FE902A2B83730046D0FB /* TextExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E487FE8A2A2B82540046D0FB /* AuthViews */ = {
+			isa = PBXGroup;
+			children = (
+				E487FE882A2B822E0046D0FB /* LoginView.swift */,
+				E487FE802A2B80160046D0FB /* RegistrationView.swift */,
+			);
+			path = AuthViews;
+			sourceTree = "<group>";
+		};
+		E487FE8B2A2B829C0046D0FB /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				E487FE8C2A2B82B40046D0FB /* CustomEmailField.swift */,
+				E487FE922A2B84240046D0FB /* CustomPasswordField.swift */,
+			);
+			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		E487FEBE2A34BA120046D0FB /* Translation */ = {
+			isa = PBXGroup;
+			children = (
+				E487FEC32A34BA380046D0FB /* Localizable.strings */,
+			);
+			path = Translation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,6 +210,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = E487FE622A24880D0046D0FB;
 			productRefGroup = E487FE6C2A24880D0046D0FB /* Products */;
@@ -126,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E487FE762A24880E0046D0FB /* Preview Assets.xcassets in Resources */,
+				E487FEC12A34BA380046D0FB /* Localizable.strings in Resources */,
 				E487FE732A24880E0046D0FB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,18 +240,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E487FE932A2B84240046D0FB /* CustomPasswordField.swift in Sources */,
+				E487FE972A2B94F80046D0FB /* RegistrationViewModel.swift in Sources */,
+				E487FE892A2B822E0046D0FB /* LoginView.swift in Sources */,
+				E487FE952A2B84A80046D0FB /* LoginViewModel.swift in Sources */,
+				E487FE912A2B83730046D0FB /* TextExtension.swift in Sources */,
+				E487FE8D2A2B82B40046D0FB /* CustomEmailField.swift in Sources */,
+				E487FE992A2B95E40046D0FB /* Branch.swift in Sources */,
+				E487FE812A2B80160046D0FB /* RegistrationView.swift in Sources */,
+				E487FE8F2A2B82CD0046D0FB /* Util.swift in Sources */,
 				E487FE712A24880D0046D0FB /* ContentView.swift in Sources */,
 				E487FE6F2A24880D0046D0FB /* RadhiApp.swift in Sources */,
+				E487FE842A2B80510046D0FB /* Constants.swift in Sources */,
+				E487FE872A2B80840046D0FB /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E487FEC32A34BA380046D0FB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E487FEC22A34BA380046D0FB /* en */,
+				E487FEC42A34BA420046D0FB /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E487FE772A24880E0046D0FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -209,6 +336,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
