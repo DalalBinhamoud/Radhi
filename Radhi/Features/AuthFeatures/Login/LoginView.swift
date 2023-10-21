@@ -68,7 +68,9 @@ struct LoginView: View {
         Button(action: loginVM.login){
             Text("login")
                 .btnLabelTextStyle()
-        }.background(.black.opacity(0.3))
+        }
+        .background(.black.opacity(0.3))
+        .disabled(!loginVM.isLoginButtonEnabled)
             .cornerRadius(40)
             .padding(.vertical)
             .alert("credential_error", isPresented: $loginVM.showError) {

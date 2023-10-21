@@ -27,6 +27,12 @@ class LoginViewModel: ObservableObject {
     @Published var password = ""
     @Published var showError = false
 
+    // MARK: - User Inputs
+
+    var isLoginButtonEnabled: Bool {
+        !email.isEmpty && !password.isEmpty
+    }
+
 
     // MARK: - Validation
     var areFieldsEmpty: Bool{

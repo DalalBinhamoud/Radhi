@@ -10,6 +10,8 @@
 		E410FA492AE2DD2A00F2B8F0 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410FA482AE2DD2A00F2B8F0 /* Router.swift */; };
 		E410FA4C2AE2E18900F2B8F0 /* SubmitReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410FA4B2AE2E18900F2B8F0 /* SubmitReviewView.swift */; };
 		E410FA4E2AE2E19A00F2B8F0 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410FA4D2AE2E19A00F2B8F0 /* DashboardView.swift */; };
+		E410FA5D2AE39B6A00F2B8F0 /* RadhiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410FA5C2AE39B6A00F2B8F0 /* RadhiTests.swift */; };
+		E410FA662AE39C4500F2B8F0 /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410FA652AE39C4500F2B8F0 /* LoginViewModelTest.swift */; };
 		E487FE6F2A24880D0046D0FB /* RadhiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487FE6E2A24880D0046D0FB /* RadhiApp.swift */; };
 		E487FE732A24880E0046D0FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E487FE722A24880E0046D0FB /* Assets.xcassets */; };
 		E487FE762A24880E0046D0FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E487FE752A24880E0046D0FB /* Preview Assets.xcassets */; };
@@ -27,10 +29,23 @@
 		E487FEC12A34BA380046D0FB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E487FEC32A34BA380046D0FB /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E410FA5E2AE39B6A00F2B8F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E487FE632A24880D0046D0FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E487FE6A2A24880D0046D0FB;
+			remoteInfo = Radhi;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		E410FA482AE2DD2A00F2B8F0 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		E410FA4B2AE2E18900F2B8F0 /* SubmitReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitReviewView.swift; sourceTree = "<group>"; };
 		E410FA4D2AE2E19A00F2B8F0 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		E410FA5A2AE39B6A00F2B8F0 /* RadhiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadhiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E410FA5C2AE39B6A00F2B8F0 /* RadhiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadhiTests.swift; sourceTree = "<group>"; };
+		E410FA652AE39C4500F2B8F0 /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
 		E487FE6B2A24880D0046D0FB /* Radhi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Radhi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E487FE6E2A24880D0046D0FB /* RadhiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadhiApp.swift; sourceTree = "<group>"; };
 		E487FE722A24880E0046D0FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +66,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E410FA572AE39B6A00F2B8F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E487FE682A24880D0046D0FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -130,10 +152,36 @@
 			path = SubmitReview;
 			sourceTree = "<group>";
 		};
+		E410FA5B2AE39B6A00F2B8F0 /* RadhiTests */ = {
+			isa = PBXGroup;
+			children = (
+				E410FA5C2AE39B6A00F2B8F0 /* RadhiTests.swift */,
+				E410FA632AE39C1800F2B8F0 /* AuthFeaturesTest */,
+			);
+			path = RadhiTests;
+			sourceTree = "<group>";
+		};
+		E410FA632AE39C1800F2B8F0 /* AuthFeaturesTest */ = {
+			isa = PBXGroup;
+			children = (
+				E410FA642AE39C2400F2B8F0 /* LoginTests */,
+			);
+			path = AuthFeaturesTest;
+			sourceTree = "<group>";
+		};
+		E410FA642AE39C2400F2B8F0 /* LoginTests */ = {
+			isa = PBXGroup;
+			children = (
+				E410FA652AE39C4500F2B8F0 /* LoginViewModelTest.swift */,
+			);
+			path = LoginTests;
+			sourceTree = "<group>";
+		};
 		E487FE622A24880D0046D0FB = {
 			isa = PBXGroup;
 			children = (
 				E487FE6D2A24880D0046D0FB /* Radhi */,
+				E410FA5B2AE39B6A00F2B8F0 /* RadhiTests */,
 				E487FE6C2A24880D0046D0FB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -142,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				E487FE6B2A24880D0046D0FB /* Radhi.app */,
+				E410FA5A2AE39B6A00F2B8F0 /* RadhiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,6 +266,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E410FA592AE39B6A00F2B8F0 /* RadhiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E410FA602AE39B6A00F2B8F0 /* Build configuration list for PBXNativeTarget "RadhiTests" */;
+			buildPhases = (
+				E410FA562AE39B6A00F2B8F0 /* Sources */,
+				E410FA572AE39B6A00F2B8F0 /* Frameworks */,
+				E410FA582AE39B6A00F2B8F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E410FA5F2AE39B6A00F2B8F0 /* PBXTargetDependency */,
+			);
+			name = RadhiTests;
+			productName = RadhiTests;
+			productReference = E410FA5A2AE39B6A00F2B8F0 /* RadhiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E487FE6A2A24880D0046D0FB /* Radhi */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E487FE792A24880E0046D0FB /* Build configuration list for PBXNativeTarget "Radhi" */;
@@ -244,6 +311,10 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					E410FA592AE39B6A00F2B8F0 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = E487FE6A2A24880D0046D0FB;
+					};
 					E487FE6A2A24880D0046D0FB = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -264,11 +335,19 @@
 			projectRoot = "";
 			targets = (
 				E487FE6A2A24880D0046D0FB /* Radhi */,
+				E410FA592AE39B6A00F2B8F0 /* RadhiTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E410FA582AE39B6A00F2B8F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E487FE692A24880D0046D0FB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -282,6 +361,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E410FA562AE39B6A00F2B8F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E410FA662AE39C4500F2B8F0 /* LoginViewModelTest.swift in Sources */,
+				E410FA5D2AE39B6A00F2B8F0 /* RadhiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E487FE672A24880D0046D0FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,6 +394,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E410FA5F2AE39B6A00F2B8F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E487FE6A2A24880D0046D0FB /* Radhi */;
+			targetProxy = E410FA5E2AE39B6A00F2B8F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		E487FEC32A34BA380046D0FB /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
@@ -319,6 +415,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E410FA612AE39B6A00F2B8F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RadhiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Radhi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Radhi";
+			};
+			name = Debug;
+		};
+		E410FA622AE39B6A00F2B8F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RadhiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Radhi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Radhi";
+			};
+			name = Release;
+		};
 		E487FE772A24880E0046D0FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -494,6 +624,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E410FA602AE39B6A00F2B8F0 /* Build configuration list for PBXNativeTarget "RadhiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E410FA612AE39B6A00F2B8F0 /* Debug */,
+				E410FA622AE39B6A00F2B8F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E487FE662A24880D0046D0FB /* Build configuration list for PBXProject "Radhi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
