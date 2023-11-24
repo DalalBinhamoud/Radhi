@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RegistrationView: View {
 
-    // MARK: Properities
+    // MARK: Properties
 
     @ObservedObject  var registrationVM = RegistrationViewModel()
     @Environment(\.dismiss) private var dismiss

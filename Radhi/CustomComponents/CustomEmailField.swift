@@ -16,14 +16,19 @@ struct CustomEmailField: View {
         VStack(alignment: .leading){
             TextField("email", text: $email , prompt: Text("email"))
                 .textFieldStyle()
-                .autocapitalization(.none)
                 .keyboardType(.emailAddress)
                 .onChange(of: email){_ in
-             showError = Util.isEmailValid(email)
+                    showError = Util.isEmailValid(email)
                 }
-               
-            Text(showError ? "" : "email_validation").foregroundColor(Constants.Colors.labelColor).padding(5)
+            showEmailError()
 
+        }
+    }
+
+    @ViewBuilder
+    func showEmailError() -> some View {
+        if showError {
+            Text("email_validation").foregroundColor(Constants.Colors.labelColor).padding(5)
         }
     }
 }

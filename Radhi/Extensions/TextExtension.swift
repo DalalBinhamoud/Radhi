@@ -31,11 +31,13 @@ extension Text {
 extension TextField {
     func textFieldStyle() -> some View {
         self.padding(20).background(RoundedRectangle(cornerRadius: 40).fill(Constants.Colors.labelColor)).multilineTextAlignment(.leading)
+            .autocapitalization(.none)
     }
 }
 
 extension SecureField {
     func textFieldStyle() -> some View {
         self.padding(25).background(RoundedRectangle(cornerRadius: 40).fill(Constants.Colors.labelColor)).multilineTextAlignment(.leading)
+            .autocapitalization(.none)
     }
 }

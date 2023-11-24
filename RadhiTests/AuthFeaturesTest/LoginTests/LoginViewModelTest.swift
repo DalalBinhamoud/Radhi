@@ -10,7 +10,7 @@ import XCTest
 
 final class LoginViewModelTest: XCTestCase {
 
-    // MARK: - Properities
+    // MARK: - Properties
 
     private enum Constants {
         static let mockEmail = "email@example.com"

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct LoginView: View {
 
+    // MARK: Properties
+
     @Binding var selectedLanguage: String
     @EnvironmentObject var router: Router
     @StateObject var loginVM = LoginViewModel()
@@ -35,12 +37,14 @@ struct LoginView: View {
                         Spacer()
                     }.padding()
                 }.background(Constants.Colors.secondaryColor)
-
-            }  .alert("error", isPresented: $loginVM.showError){
-                Button("close"){}
-            } message:{
-                Text(loginVM.errorMsg)
-            }.onAppear {
+                CustomAlert(isAlertPresented: $loginVM.showError, title: "error", message: loginVM.errorMsg)
+            }
+//            .alert("error", isPresented: $loginVM.showError) {
+//                Button("close"){}
+//            } message: {
+//                Text(loginVM.errorMsg)
+//            }
+            .onAppear {
                 self.loginVM.setup(self.router)
             }
         }
@@ -70,13 +74,8 @@ struct LoginView: View {
             Text("login")
                 .btnLabelTextStyle()
         }
-        .background(.black.opacity(0.3))
-        .disabled(!loginVM.isLoginButtonEnabled)
-            .cornerRadius(40)
-            .padding(.vertical)
-            .alert("credential_error", isPresented: $loginVM.showError) {
-            Button("ok", role: .cancel) { }
-        }
+        .primaryButtonStyle()
+        .disabled(!loginVM.isLoginComplete)
     }
 
     @ViewBuilder

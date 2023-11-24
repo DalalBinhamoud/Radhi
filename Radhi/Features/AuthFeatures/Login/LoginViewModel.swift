@@ -6,10 +6,9 @@
 //
 
 import Foundation
-//import FirebaseFirestore
-//import FirebaseAuth
+import Combine
 
-@MainActor
+//@MainActor
 class LoginViewModel: ObservableObject {
 
     @Published var router: Router?
@@ -18,6 +17,13 @@ class LoginViewModel: ObservableObject {
 
     @Published var showPassword = false
     @Published var errorMsg = ""
+    
+    var authService = AuthService()
+    var cancellables = Set<AnyCancellable>()
+
+//      init(authService: AuthService) {
+//          self.authService = authService
+//      }
 
 
     // MARK: - User Inputs
@@ -27,12 +33,10 @@ class LoginViewModel: ObservableObject {
     @Published var password = ""
     @Published var showError = false
 
-    // MARK: - User Inputs
-
-    var isLoginButtonEnabled: Bool {
-        !email.isEmpty && !password.isEmpty
-    }
-
+    // MARK: - init
+    func setup(_ router: Router) {
+        self.router = router
+     }
 
     // MARK: - Validation
     var areFieldsEmpty: Bool{
@@ -40,16 +44,8 @@ class LoginViewModel: ObservableObject {
     }
 
     var isLoginComplete: Bool {
-        if !Util.isEmailValid(email) || areFieldsEmpty {
-                return false
-            }
-            return true
+        Util.isEmailValid(email) && !areFieldsEmpty
         }
-
-    // MARK: - init
-    func setup(_ router: Router) {
-        self.router = router
-     }
 
     // MARK: - Functions
     
@@ -59,7 +55,6 @@ class LoginViewModel: ObservableObject {
     }
 
 
-    @MainActor
     func tapToRegister() {
         self.router?.push(to: .register)
     }

@@ -12,6 +12,16 @@
 		E410FA4E2AE2E19A00F2B8F0 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410FA4D2AE2E19A00F2B8F0 /* DashboardView.swift */; };
 		E410FA5D2AE39B6A00F2B8F0 /* RadhiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410FA5C2AE39B6A00F2B8F0 /* RadhiTests.swift */; };
 		E410FA662AE39C4500F2B8F0 /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410FA652AE39C4500F2B8F0 /* LoginViewModelTest.swift */; };
+		E42B58C92B108D6B00FCC9B3 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58C82B108D6B00FCC9B3 /* CustomAlert.swift */; };
+		E42B58CB2B10911A00FCC9B3 /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58CA2B10911A00FCC9B3 /* ButtonExtension.swift */; };
+		E42B58CE2B1093C300FCC9B3 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58CD2B1093C300FCC9B3 /* AuthService.swift */; };
+		E42B58D02B10A9E900FCC9B3 /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58CF2B10A9E900FCC9B3 /* APISession.swift */; };
+		E42B58D22B10AA6600FCC9B3 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58D12B10AA6600FCC9B3 /* APIEndpoint.swift */; };
+		E42B58D82B10AB3400FCC9B3 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58D72B10AB3400FCC9B3 /* LoginRequest.swift */; };
+		E42B58DB2B10B67000FCC9B3 /* HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58DA2B10B67000FCC9B3 /* HttpMethods.swift */; };
+		E42B58DD2B10BB7600FCC9B3 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58DC2B10BB7600FCC9B3 /* LoginResponse.swift */; };
+		E42B58DF2B10BE9A00FCC9B3 /* swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E42B58DE2B10BE9A00FCC9B3 /* swiftlint.yml */; };
+		E47CA6D62B10C5BA001AD1BE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E47CA6D52B10C5BA001AD1BE /* .swiftlint.yml */; };
 		E487FE6F2A24880D0046D0FB /* RadhiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487FE6E2A24880D0046D0FB /* RadhiApp.swift */; };
 		E487FE732A24880E0046D0FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E487FE722A24880E0046D0FB /* Assets.xcassets */; };
 		E487FE762A24880E0046D0FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E487FE752A24880E0046D0FB /* Preview Assets.xcassets */; };
@@ -46,6 +56,16 @@
 		E410FA5A2AE39B6A00F2B8F0 /* RadhiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadhiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E410FA5C2AE39B6A00F2B8F0 /* RadhiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadhiTests.swift; sourceTree = "<group>"; };
 		E410FA652AE39C4500F2B8F0 /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
+		E42B58C82B108D6B00FCC9B3 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		E42B58CA2B10911A00FCC9B3 /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
+		E42B58CD2B1093C300FCC9B3 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		E42B58CF2B10A9E900FCC9B3 /* APISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
+		E42B58D12B10AA6600FCC9B3 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		E42B58D72B10AB3400FCC9B3 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		E42B58DA2B10B67000FCC9B3 /* HttpMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethods.swift; sourceTree = "<group>"; };
+		E42B58DC2B10BB7600FCC9B3 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		E42B58DE2B10BE9A00FCC9B3 /* swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
+		E47CA6D52B10C5BA001AD1BE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		E487FE6B2A24880D0046D0FB /* Radhi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Radhi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E487FE6E2A24880D0046D0FB /* RadhiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadhiApp.swift; sourceTree = "<group>"; };
 		E487FE722A24880E0046D0FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,9 +197,55 @@
 			path = LoginTests;
 			sourceTree = "<group>";
 		};
+		E42B58CC2B10939500FCC9B3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E42B58D92B10B65700FCC9B3 /* ApiHelpers */,
+				E42B58D42B10AAE800FCC9B3 /* AuthService */,
+				E42B58CF2B10A9E900FCC9B3 /* APISession.swift */,
+				E42B58D12B10AA6600FCC9B3 /* APIEndpoint.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E42B58D42B10AAE800FCC9B3 /* AuthService */ = {
+			isa = PBXGroup;
+			children = (
+				E42B58CD2B1093C300FCC9B3 /* AuthService.swift */,
+				E42B58D62B10AB0000FCC9B3 /* Responses */,
+				E42B58D52B10AAF700FCC9B3 /* Requests */,
+			);
+			path = AuthService;
+			sourceTree = "<group>";
+		};
+		E42B58D52B10AAF700FCC9B3 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				E42B58D72B10AB3400FCC9B3 /* LoginRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		E42B58D62B10AB0000FCC9B3 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				E42B58DC2B10BB7600FCC9B3 /* LoginResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		E42B58D92B10B65700FCC9B3 /* ApiHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				E42B58DA2B10B67000FCC9B3 /* HttpMethods.swift */,
+			);
+			path = ApiHelpers;
+			sourceTree = "<group>";
+		};
 		E487FE622A24880D0046D0FB = {
 			isa = PBXGroup;
 			children = (
+				E47CA6D52B10C5BA001AD1BE /* .swiftlint.yml */,
 				E487FE6D2A24880D0046D0FB /* Radhi */,
 				E410FA5B2AE39B6A00F2B8F0 /* RadhiTests */,
 				E487FE6C2A24880D0046D0FB /* Products */,
@@ -198,8 +264,10 @@
 		E487FE6D2A24880D0046D0FB /* Radhi */ = {
 			isa = PBXGroup;
 			children = (
+				E42B58DE2B10BE9A00FCC9B3 /* swiftlint.yml */,
 				E410FA4F2AE2EE9700F2B8F0 /* Features */,
 				E410FA472AE2DD1400F2B8F0 /* Router */,
+				E42B58CC2B10939500FCC9B3 /* Services */,
 				E487FEBE2A34BA120046D0FB /* Translation */,
 				E487FE8B2A2B829C0046D0FB /* CustomComponents */,
 				E487FE852A2B80680046D0FB /* Extensions */,
@@ -242,6 +310,7 @@
 			children = (
 				E487FE862A2B80840046D0FB /* ColorExtension.swift */,
 				E487FE902A2B83730046D0FB /* TextExtension.swift */,
+				E42B58CA2B10911A00FCC9B3 /* ButtonExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -251,6 +320,7 @@
 			children = (
 				E487FE8C2A2B82B40046D0FB /* CustomEmailField.swift */,
 				E487FE922A2B84240046D0FB /* CustomPasswordField.swift */,
+				E42B58C82B108D6B00FCC9B3 /* CustomAlert.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -353,7 +423,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E47CA6D62B10C5BA001AD1BE /* .swiftlint.yml in Resources */,
 				E487FE762A24880E0046D0FB /* Preview Assets.xcassets in Resources */,
+				E42B58DF2B10BE9A00FCC9B3 /* swiftlint.yml in Resources */,
 				E487FEC12A34BA380046D0FB /* Localizable.strings in Resources */,
 				E487FE732A24880E0046D0FB /* Assets.xcassets in Resources */,
 			);
@@ -396,14 +468,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42B58DB2B10B67000FCC9B3 /* HttpMethods.swift in Sources */,
 				E487FE932A2B84240046D0FB /* CustomPasswordField.swift in Sources */,
+				E42B58DD2B10BB7600FCC9B3 /* LoginResponse.swift in Sources */,
+				E42B58D02B10A9E900FCC9B3 /* APISession.swift in Sources */,
 				E410FA4E2AE2E19A00F2B8F0 /* DashboardView.swift in Sources */,
 				E487FE972A2B94F80046D0FB /* RegistrationViewModel.swift in Sources */,
+				E42B58CE2B1093C300FCC9B3 /* AuthService.swift in Sources */,
 				E487FE892A2B822E0046D0FB /* LoginView.swift in Sources */,
 				E487FE952A2B84A80046D0FB /* LoginViewModel.swift in Sources */,
 				E487FE912A2B83730046D0FB /* TextExtension.swift in Sources */,
 				E487FE8D2A2B82B40046D0FB /* CustomEmailField.swift in Sources */,
 				E487FE992A2B95E40046D0FB /* Branch.swift in Sources */,
+				E42B58D82B10AB3400FCC9B3 /* LoginRequest.swift in Sources */,
 				E487FE812A2B80160046D0FB /* RegistrationView.swift in Sources */,
 				E487FE8F2A2B82CD0046D0FB /* Util.swift in Sources */,
 				E410FA492AE2DD2A00F2B8F0 /* Router.swift in Sources */,
@@ -411,6 +488,9 @@
 				E410FA4C2AE2E18900F2B8F0 /* SubmitReviewView.swift in Sources */,
 				E487FE842A2B80510046D0FB /* Constants.swift in Sources */,
 				E487FE872A2B80840046D0FB /* ColorExtension.swift in Sources */,
+				E42B58CB2B10911A00FCC9B3 /* ButtonExtension.swift in Sources */,
+				E42B58C92B108D6B00FCC9B3 /* CustomAlert.swift in Sources */,
+				E42B58D22B10AA6600FCC9B3 /* APIEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
