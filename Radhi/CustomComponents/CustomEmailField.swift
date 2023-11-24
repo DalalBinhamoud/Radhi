@@ -15,7 +15,7 @@ struct CustomEmailField: View {
     var body: some View {
         VStack(alignment: .leading){
             TextField("email", text: $email , prompt: Text("email"))
-                .TextFieldStyle()
+                .textFieldStyle()
                 .autocapitalization(.none)
                 .keyboardType(.emailAddress)
                 .onChange(of: email){_ in

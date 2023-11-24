@@ -21,7 +21,8 @@ struct LoginView: View {
 
                         languageSelector
                         Spacer()
-                        Image("logo").resizable().scaledToFill().frame(width: geo.size.width * 0.4, height: geo.size.height * 0.4)
+                        Image("logo").resizable().scaledToFill()
+                            .frame(width: geo.size.width * 0.4, height: geo.size.height * 0.4)
 
                         CustomEmailField(email: $loginVM.email)
 

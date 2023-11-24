@@ -46,10 +46,10 @@ struct CustomPasswordField: View {
 
             Group{
                 if showPassword  {
-                    TextField("password", text: $password,prompt: Text("password")).TextFieldStyle()
+                    TextField("password", text: $password,prompt: Text("password")).textFieldStyle()
                         .autocapitalization(.none)
                 } else{
-                    SecureField("password", text: $password,prompt: Text("password")).TextFieldStyle()
+                    SecureField("password", text: $password,prompt: Text("password")).textFieldStyle()
                         .autocapitalization(.none)
                 }
             }
