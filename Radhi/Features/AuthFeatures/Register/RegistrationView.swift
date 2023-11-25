@@ -61,7 +61,7 @@ struct RegistrationView: View {
                 passwordToCompareWith: $registerVM.password
             )
 
-            TextField("brand_name", text: $registerVM.brandName).textFieldStyle()
+            CustomRequiredTextField(label: "brand_name", text: $registerVM.brandName)
         }
     }
 

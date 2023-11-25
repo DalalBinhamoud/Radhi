@@ -47,3 +47,4 @@
 // validation
 "email_validation" = "الرجاء إدخال بريد إلكتروني صحيح";
 "email_already_exist" = "البريد الإلكتروني مستخدم من قبل حساب آخر";
+"required_field" = "هذا الحقل مطلوب";

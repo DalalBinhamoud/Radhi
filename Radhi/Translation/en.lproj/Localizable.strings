@@ -47,3 +47,4 @@
 // validation
 "email_validation" = "Please enter a valid email";
 "email_already_exist" = "email address is already in use by another accoun";
+"required_field" = "This field is required";
