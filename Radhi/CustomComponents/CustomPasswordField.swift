@@ -7,53 +7,25 @@
 
 import SwiftUI
 
-enum NoFlipEdge {
-    case left, right
-}
-
-struct NoFlipPadding: ViewModifier {
-    let edge: NoFlipEdge
-    let length: CGFloat?
-    @Environment(\.layoutDirection) var layoutDirection
-
-    private var computedEdge: Edge.Set {
-        if layoutDirection == .rightToLeft {
-            return edge == .left ? .leading : .trailing
-        } else {
-            return edge == .left ? .leading : .trailing
-        }
-    }
-
-    func body(content: Content) -> some View {
-        content
-            .padding(computedEdge, length)
-    }
-}
-
-extension View {
-    func padding(_ edge: NoFlipEdge, _ length: CGFloat? = nil) -> some View {
-        self.modifier(NoFlipPadding(edge: edge, length: length))
-    }
-}
 struct CustomPasswordField: View {
 
-    @Binding var password : String
+    @Binding var password: String
+    var title: String = "password"
     @State private var showPassword = false
 
-
     var body: some View {
-        ZStack(alignment: .trailing){
-
-            Group{
-                if showPassword  {
-                    TextField("password", text: $password,prompt: Text("password")).textFieldStyle()
-                } else{
-                    SecureField("password", text: $password,prompt: Text("password")).textFieldStyle()
+        ZStack(alignment: .trailing) {
+            Group {
+                if showPassword {
+                    TextField(LocalizedStringKey(title), text: $password).textFieldStyle()
+                } else {
+                    SecureField(LocalizedStringKey(title), text: $password)
+                        .textFieldStyle()
                 }
             }
-            Button(action: {
+            Button {
                 showPassword.toggle()
-            }){
+            } label: {
                 Image(systemName: showPassword ? "eye" : "eye.slash").imageScale(.large)
             }.padding(.horizontal, 25)
         }

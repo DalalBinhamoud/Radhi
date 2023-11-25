@@ -48,7 +48,7 @@ class LoginViewModel: ObservableObject {
     }
 
     func tapToRegister() {
-//        self.router?.push(to: .register)
+        self.router?.push(to: .register)
     }
 
 }

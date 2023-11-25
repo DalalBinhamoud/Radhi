@@ -13,7 +13,7 @@ struct LoginView: View {
 
     @Binding var selectedLanguage: String
     @EnvironmentObject var router: Router
-    @ObservedObject var loginVM = LoginViewModel()
+    @StateObject var loginVM = LoginViewModel()
 
     var body: some View {
         GeometryReader { geo in
@@ -45,6 +45,7 @@ struct LoginView: View {
         }
         .background(Constants.Colors.secondaryColor)
         .onAppear {
+            // TODO: Avoid memory leaking
             self.loginVM.setup(self.router)
         }
     }
@@ -82,7 +83,7 @@ struct LoginView: View {
     @ViewBuilder
     var registerButton: some View {
         HStack {
-            Text("dont_have_account").foregroundColor(Constants.Colors.labelColor)
+            Text("dont_have_account").foregroundColor(Constants.Colors.label)
             Button(action: loginVM.tapToRegister) {
                 Text("register")
             }

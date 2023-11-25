@@ -21,6 +21,7 @@ struct RadhiApp: App {
                      switch route {
                      case .register:
                          RegistrationView()
+                             .withCustomBackButton(title: NSLocalizedString("register", comment: ""), router)
                      case .login:
                          LoginView(selectedLanguage: $selectedLanguage)
                      case .submitReview:
@@ -37,4 +38,17 @@ struct RadhiApp: App {
              .environment(\.locale, .init(identifier: selectedLanguage))
          }
      }
+}
+
+extension View {
+    func withCustomBackButton(title: String, _ router: Router) -> some View {
+        self.navigationBarBackButtonHidden(true)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    CustomBackButton(title: title) {
+                        router.pop()
+                    }
+                }
+            }
+    }
 }

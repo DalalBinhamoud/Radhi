@@ -21,6 +21,7 @@
 		E42B58DD2B10BB7600FCC9B3 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58DC2B10BB7600FCC9B3 /* LoginResponse.swift */; };
 		E42B58DF2B10BE9A00FCC9B3 /* swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E42B58DE2B10BE9A00FCC9B3 /* swiftlint.yml */; };
 		E47CA6D62B10C5BA001AD1BE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E47CA6D52B10C5BA001AD1BE /* .swiftlint.yml */; };
+		E47CA6D82B11E7CE001AD1BE /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47CA6D72B11E7CE001AD1BE /* CustomBackButton.swift */; };
 		E487FE6F2A24880D0046D0FB /* RadhiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487FE6E2A24880D0046D0FB /* RadhiApp.swift */; };
 		E487FE732A24880E0046D0FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E487FE722A24880E0046D0FB /* Assets.xcassets */; };
 		E487FE762A24880E0046D0FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E487FE752A24880E0046D0FB /* Preview Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		E42B58DC2B10BB7600FCC9B3 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		E42B58DE2B10BE9A00FCC9B3 /* swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
 		E47CA6D52B10C5BA001AD1BE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		E47CA6D72B11E7CE001AD1BE /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
 		E487FE6B2A24880D0046D0FB /* Radhi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Radhi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E487FE6E2A24880D0046D0FB /* RadhiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadhiApp.swift; sourceTree = "<group>"; };
 		E487FE722A24880E0046D0FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 				E487FE8C2A2B82B40046D0FB /* CustomEmailField.swift */,
 				E487FE922A2B84240046D0FB /* CustomPasswordField.swift */,
 				E42B58C82B108D6B00FCC9B3 /* CustomAlert.swift */,
+				E47CA6D72B11E7CE001AD1BE /* CustomBackButton.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				E487FE952A2B84A80046D0FB /* LoginViewModel.swift in Sources */,
 				E487FE912A2B83730046D0FB /* TextExtension.swift in Sources */,
 				E487FE8D2A2B82B40046D0FB /* CustomEmailField.swift in Sources */,
+				E47CA6D82B11E7CE001AD1BE /* CustomBackButton.swift in Sources */,
 				E487FE992A2B95E40046D0FB /* Branch.swift in Sources */,
 				E42B58D82B10AB3400FCC9B3 /* LoginRequest.swift in Sources */,
 				E487FE812A2B80160046D0FB /* RegistrationView.swift in Sources */,

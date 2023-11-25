@@ -11,87 +11,64 @@ struct RegistrationView: View {
 
     // MARK: Properties
 
-    @ObservedObject  var registrationVM = RegistrationViewModel()
-    @Environment(\.dismiss) private var dismiss
-    @State private var showPassword = false
-    @State private var showConfirmPassword = false
-    @State private var showAlert = false
-    @State private var showError = false
-    @State private var errorMsg = ""
-    @State private var bgColor = Color(.sRGB, red: 0.98, green: 0.9, blue: 0.2)
+    @ObservedObject  var registerVM = RegistrationViewModel()
 
     var body: some View {
         ScrollView {
-            GeometryReader { geo in
-                ZStack {
-                    VStack(alignment: .center) {
-                        Spacer()
-                        Image("background")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: geo.size.width * 0.3, height: geo.size.height * 0.3)
+            ZStack {
+                VStack(alignment: .center, spacing: Constants.Spacing.medium) {
 
-                        fields()
+                    fields
 
-                        // MARK: number of emojies
-                        Text("number of Emojies").foregroundColor(.white)
-                        Picker("number of emojies",
-                               selection: $registrationVM.numOfEmojies) {
-                            Text("3")
-                            Text("5")
-                        }.pickerStyle(.segmented).background(Constants.Colors.labelColor)
+                    // MARK: number of emojis
+                    Text("num_of_emogis").foregroundColor(.white)
+                    Picker("num_of_emogis",
+                        selection: $registerVM.numOfEmojis) {
+                        Text("3")
+                        Text("5")
+                    }.pickerStyle(.segmented).background(Constants.Colors.label)
 
-                        // MARK: Color picker
-                        ColorPicker("Alignment Guides", selection: $bgColor)
+                    // MARK: Color picker
+                    ColorPicker("select_primary_brand_color", selection: $registerVM.selectedPrimaryColor)
+                        .foregroundColor(Constants.Colors.label)
+                    ColorPicker("select_secondary_brand_color", selection: $registerVM.selectedSecondaryColor)
+                        .foregroundColor(Constants.Colors.label)
 
-                        // MARK: Action Button
-                        registerButton()
-                    }.padding()
-                }.background(Constants.Colors.secondaryColor)
+                    // MARK: Action Button
+                    registerButton()
+                }.padding()
             }
         }.background(Constants.Colors.secondaryColor)
     }
 
     @ViewBuilder
-    func fields() -> some View {
-        VStack {
-            CustomEmailField(email: $registrationVM.email)
+    var fields: some View {
+        VStack(spacing: Constants.Spacing.medium) {
+            CustomEmailField(email: $registerVM.email)
 
             // password field
-            CustomPasswordField(password: $registrationVM.password)
+            CustomPasswordField(password: $registerVM.password)
 
             // confirm password field
-            CustomPasswordField(password: $registrationVM.confirmPW)
+            CustomPasswordField(password: $registerVM.confirmPW, title: "confirm_password")
 
-            TextField("brand name", text: $registrationVM.brandName).textFieldStyle()
+            TextField("brand_name", text: $registerVM.brandName).textFieldStyle()
         }
     }
 
     @ViewBuilder
     func registerButton () -> some View {
-        Button(action:  {
-            Task{
-
-            }
-
-        } ){
-            Text(NSLocalizedString("register", comment: "")).btnLabelTextStyle()
-        }.background(.black.opacity(0.3)).cornerRadius(40).padding()
-            .alert(NSLocalizedString("error", comment: ""), isPresented: $showError){
-                Button(NSLocalizedString("close", comment: "")){}
-            } message:{
-                Text(NSLocalizedString(errorMsg, comment: ""))
-            }
-            .alert(isPresented: $showAlert) {
-                Alert(title: Text(NSLocalizedString("registration_request", comment: "")),
-                      message: Text(NSLocalizedString("registration_request_msg",
-                                                      comment: "")),
-                      dismissButton: .default(Text(NSLocalizedString("ok", comment: ""))))
-            }
-            .alert(NSLocalizedString("error", comment: ""), isPresented: $registrationVM.showErrorOfBE){
-                Button(NSLocalizedString("close", comment: "")){}
-            } message:{
-                Text(registrationVM.showErrorMsgOfBE)
+        Button {
+            registerVM.register()
+        } label: {
+            Text("register").btnLabelTextStyle()
+        }.primaryButtonStyle()
+            .opacity(!registerVM.isRegisterComplete ? Constants.Opacity.disabledButton : 1)
+            .disabled(!registerVM.isRegisterComplete)
+            .alert("error", isPresented: $registerVM.showError) {
+                Button("close") { }
+            } message: {
+                Text(registerVM.errorMessage)
             }
     }
 }
