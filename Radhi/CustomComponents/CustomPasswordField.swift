@@ -7,27 +7,72 @@
 
 import SwiftUI
 
+enum PasswordType {
+    case regular
+    case confirm
+}
+
 struct CustomPasswordField: View {
 
     @Binding var password: String
-    var title: String = "password"
+    var shouldValidatePassword: Bool?
+    var title: String?
+    var passwordType: PasswordType = .regular
+    var passwordToCompareWith: Binding<String>?
+
+    // MARK: - Internal property
     @State private var showPassword = false
+    @State private var showError = false
 
     var body: some View {
-        ZStack(alignment: .trailing) {
-            Group {
-                if showPassword {
-                    TextField(LocalizedStringKey(title), text: $password).textFieldStyle()
-                } else {
-                    SecureField(LocalizedStringKey(title), text: $password)
-                        .textFieldStyle()
+        VStack {
+            ZStack(alignment: .trailing) {
+                Group {
+                    if showPassword {
+                        TextField(LocalizedStringKey(title ?? "password"), text: $password)
+                            .textFieldStyle()
+                            .onChange(of: password) {_ in
+                                onChange()
+                            }
+
+                    } else {
+                        SecureField(LocalizedStringKey(title ?? "password"), text: $password)
+                            .textFieldStyle()
+                            .onChange(of: password) {_ in
+                                onChange()
+                            }
+
+                    }
                 }
+                Button {
+                    showPassword.toggle()
+                } label: {
+                    Image(systemName: showPassword ? "eye" : "eye.slash").imageScale(.large)
+                }.padding(.horizontal, 25)
             }
-            Button {
-                showPassword.toggle()
-            } label: {
-                Image(systemName: showPassword ? "eye" : "eye.slash").imageScale(.large)
-            }.padding(.horizontal, 25)
+            showPasswordError()
+        }
+    }
+
+    func onChange() {
+        //TODO: only show the error when user left the focus on field
+        if shouldValidatePassword ?? false {
+            showError = validateBasedOnPasswordType(passwordType)
+        }
+    }
+
+    func validateBasedOnPasswordType(_ type: PasswordType) -> Bool {
+        switch(type) {
+        case .regular: return !Util.isPasswordValid(password)
+        case .confirm: return !Util.isPasswordMatch(password, with: passwordToCompareWith)
+        }
+    }
+
+    @ViewBuilder
+    func showPasswordError() -> some View {
+        if showError {
+            Text(LocalizedStringKey(passwordType == .regular ? "password_error" : "confirm_password_error"))
+                .foregroundColor(Constants.Colors.errorColor).padding(5)
         }
     }
 

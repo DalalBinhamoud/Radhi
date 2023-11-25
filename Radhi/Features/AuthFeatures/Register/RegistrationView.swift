@@ -47,10 +47,19 @@ struct RegistrationView: View {
             CustomEmailField(email: $registerVM.email)
 
             // password field
-            CustomPasswordField(password: $registerVM.password)
+            CustomPasswordField(
+                password: $registerVM.password,
+                shouldValidatePassword: true
+            )
 
             // confirm password field
-            CustomPasswordField(password: $registerVM.confirmPW, title: "confirm_password")
+            CustomPasswordField(
+                password: $registerVM.confirmPW,
+                shouldValidatePassword: true,
+                title: "confirm_password",
+                passwordType: .confirm,
+                passwordToCompareWith: $registerVM.password
+            )
 
             TextField("brand_name", text: $registerVM.brandName).textFieldStyle()
         }

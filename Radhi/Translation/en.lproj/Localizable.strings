@@ -10,6 +10,7 @@
 //auth translation
 "email" = "Email";
 "password" = "Password";
+"password_error" = "Password should be at least 8 characters including: \n 1 upper case letter \n 1 lower case letter \n 1 number \n 1 special character";
 "confirm_password" = "Confirm Password";
 "confirm_password_error" = "Password mismatch";
 "login" = "Login";

@@ -32,17 +32,16 @@ class RegistrationViewModel: ObservableObject {
     @Published var showError = false
     @Published var errorMessage = ""
 
-
-    var areRequiredFieldsEmpty: Bool{
+    var areRequiredFieldsEmpty: Bool {
         [email, password, confirmPW, brandName ].contains(where: \.isEmpty)
     }
 
-    var isPasswordMatch: Bool{
+    var isPasswordMatch: Bool {
         password == confirmPW
     }
 
     var isRegisterComplete: Bool {
-        Util.isEmailValid(email) && !areRequiredFieldsEmpty && isPasswordMatch
+        Util.isEmailValid(email) && Util.isPasswordValid(password) && !areRequiredFieldsEmpty && isPasswordMatch
     }
 
     func register() {

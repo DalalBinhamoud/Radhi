@@ -10,6 +10,7 @@
 //auth translation
 "email" = "البريد الإلكتروني";
 "password" = "الرقم السري";
+"password_error" = "يجب أن يكون الرقم السري ٨ خانات متضمنة على الأقل: \n حرف كبير \n حرف صغير \n رقم \n رمز خاص";
 "confirm_password" = "تأكيد الرقم السري";
 "confirm_password_error" = "الرقم السري غير متطابق";
 "login" = "تسجيل الدخول";
