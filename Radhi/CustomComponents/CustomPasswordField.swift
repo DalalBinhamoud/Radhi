@@ -38,7 +38,7 @@ extension View {
 struct CustomPasswordField: View {
 
     @Binding var password : String
-    @Binding var showPassword : Bool
+    @State private var showPassword = false
 
 
     var body: some View {
@@ -63,6 +63,6 @@ struct CustomPasswordField: View {
 
 struct CustomPasswordField_Previews: PreviewProvider {
     static var previews: some View {
-        CustomPasswordField(password: .constant(""), showPassword: .constant(false))
+        CustomPasswordField(password: .constant(""))
     }
 }

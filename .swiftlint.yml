@@ -1,7 +1,8 @@
 disabled_rules:
-    - line_length
     - force_cast
     - force_try
+    - line_length
+    - redundant_string_enum_value
 opt_in_rules:
     - indentation_width
     - explicit_self

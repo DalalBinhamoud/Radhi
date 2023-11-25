@@ -13,56 +13,56 @@ struct LoginView: View {
 
     @Binding var selectedLanguage: String
     @EnvironmentObject var router: Router
-    @StateObject var loginVM = LoginViewModel()
-
+    @ObservedObject var loginVM = LoginViewModel()
 
     var body: some View {
-            GeometryReader{ geo in
-                ZStack{
-                    VStack(alignment: .center){
+        GeometryReader { geo in
+            ZStack {
+                VStack(alignment: .center, spacing: Constants.Spacing.medium) {
 
-                        languageSelector
-                        Spacer()
-                        Image("logo").resizable().scaledToFill()
-                            .frame(width: geo.size.width * 0.4, height: geo.size.height * 0.4)
+                    languageSelector
 
-                        CustomEmailField(email: $loginVM.email)
+                    Image("logo").resizable().scaledToFill()
+                        .frame(width: geo.size.width * 0.4, height: geo.size.height * 0.4)
 
-                        CustomPasswordField(password: $loginVM.password, showPassword: $loginVM.showPassword)
+                    CustomEmailField(email: $loginVM.email)
 
-                        loginButton
+                    CustomPasswordField(password: $loginVM.password)
 
-                        registerButton
+                    loginButton
 
-                        Spacer()
-                    }.padding()
-                }.background(Constants.Colors.secondaryColor)
-                CustomAlert(isAlertPresented: $loginVM.showError, title: "error", message: loginVM.errorMsg)
+                    registerButton
+
+                }.padding()
             }
-//            .alert("error", isPresented: $loginVM.showError) {
-//                Button("close"){}
-//            } message: {
-//                Text(loginVM.errorMsg)
-//            }
-            .onAppear {
-                self.loginVM.setup(self.router)
+            .background(Constants.Colors.secondaryColor)
+
+            .alert("error", isPresented: $loginVM.showError) {
+                Button("close") { }
+            } message: {
+                Text(loginVM.errorMsg)
             }
         }
+        .background(Constants.Colors.secondaryColor)
+        .onAppear {
+            self.loginVM.setup(self.router)
+        }
+    }
 
     @ViewBuilder
-    var languageSelector : some View {
-        HStack{
+    var languageSelector: some View {
+        HStack {
             Spacer()
-            Button(action: {
+            Button {
                 selectedLanguage = selectedLanguage == "ar" ? "en" : "ar"
-            }) {
+            } label: {
                 Text("displayed_language")
                     .padding()
                     .foregroundColor(.white)
                     .background(
                         RoundedRectangle(cornerRadius: 2)
-                        .stroke()
-                        .fill(.white)
+                            .stroke()
+                            .fill(.white)
                     )
             }
         }
@@ -70,17 +70,18 @@ struct LoginView: View {
 
     @ViewBuilder
     var loginButton: some View {
-        Button(action: loginVM.login){
+        Button(action: loginVM.login) {
             Text("login")
                 .btnLabelTextStyle()
         }
         .primaryButtonStyle()
+        .opacity(!loginVM.isLoginComplete ? Constants.Opacity.disabledButton : 1)
         .disabled(!loginVM.isLoginComplete)
     }
 
     @ViewBuilder
     var registerButton: some View {
-        HStack{
+        HStack {
             Text("dont_have_account").foregroundColor(Constants.Colors.labelColor)
             Button(action: loginVM.tapToRegister) {
                 Text("register")

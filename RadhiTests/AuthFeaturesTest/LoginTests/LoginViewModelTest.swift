@@ -30,22 +30,40 @@ final class LoginViewModelTest: XCTestCase {
         sut.email = String()
         sut.password = Constants.mockPassword
 
-        //then
-        XCTAssertFalse(sut.isLoginButtonEnabled)
+        // then
+        XCTAssertFalse(sut.isLoginComplete)
 
         // when
         sut.email = Constants.mockEmail
         sut.password = String()
 
-        //then
-        XCTAssertFalse(sut.isLoginButtonEnabled)
+        // then
+        XCTAssertFalse(sut.isLoginComplete)
 
         // when
         sut.email = Constants.mockEmail
         sut.password = Constants.mockPassword
 
-        //then
-        XCTAssertTrue(sut.isLoginButtonEnabled)
+        // then
+        XCTAssertTrue(sut.isLoginComplete)
     }
 
+    func test_emailValidation() {
+        // given
+        let sut = LoginViewModel()
+
+        // when
+        sut.email = Constants.mockEmail // valid email
+        sut.password = Constants.mockPassword
+
+        // then
+        XCTAssertTrue(sut.isLoginComplete)
+
+        // when
+        sut.email = "InvalidEmailFormat" // invalid email
+        sut.password = Constants.mockPassword
+
+        // then
+        XCTAssertFalse(sut.isLoginComplete)
+    }
 }

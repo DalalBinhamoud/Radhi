@@ -9,16 +9,17 @@ import SwiftUI
 
 struct CustomEmailField: View {
 
-    @Binding var email : String
-    @State private var showError = true
+    @Binding var email: String
+    @State private var showError = false
 
     var body: some View {
-        VStack(alignment: .leading){
-            TextField("email", text: $email , prompt: Text("email"))
+        VStack(alignment: .leading) {
+            TextField("email", text: $email, prompt: Text("email"))
                 .textFieldStyle()
                 .keyboardType(.emailAddress)
-                .onChange(of: email){_ in
-                    showError = Util.isEmailValid(email)
+                .onChange(of: email) {_ in
+                    //TODO: only show the error when user left the focus on field
+                    showError = !Util.isEmailValid(email)
                 }
             showEmailError()
 
@@ -28,7 +29,8 @@ struct CustomEmailField: View {
     @ViewBuilder
     func showEmailError() -> some View {
         if showError {
-            Text("email_validation").foregroundColor(Constants.Colors.labelColor).padding(5)
+            Text("email_validation")
+                .foregroundColor(Constants.Colors.errorColor).padding(5)
         }
     }
 }

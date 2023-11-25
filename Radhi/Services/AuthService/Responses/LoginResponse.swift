@@ -11,6 +11,6 @@ struct LoginResponse: Codable {
     var message: String
 
     enum CodingKeys: String, CodingKey {
-       case message = "message"
+        case message = "message"
     }
 }

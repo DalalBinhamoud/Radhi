@@ -13,6 +13,7 @@ struct Constants {
         static let primaryColor = Color(hex: "#ba952a")
         static let  secondaryColor = Color(red: 0.01568627450980392, green: 0.1411764705882353, blue: 0.29411764705882354)
         static let labelColor = Color.white
+        static let errorColor = Color.red
     }
 
     enum MaxLength {
@@ -27,7 +28,17 @@ struct Constants {
         static let subtitle = CGFloat(18)
     }
 
+    enum Opacity {
+        static let disabledButton = 0.3
+    }
+
     enum Regex {
         static let emailRegex = "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$"
+    }
+
+    enum Spacing {
+        static let small = 10.0
+        static let medium = 20.0
+        static let large = 30.0
     }
 }

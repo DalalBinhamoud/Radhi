@@ -58,10 +58,10 @@ struct RegistrationView: View {
             CustomEmailField(email: $registrationVM.email)
 
             // password field
-            CustomPasswordField(password: $registrationVM.password, showPassword: $showPassword)
+            CustomPasswordField(password: $registrationVM.password)
 
             // confirm password field
-            CustomPasswordField(password: $registrationVM.confirmPW, showPassword: $showConfirmPassword)
+            CustomPasswordField(password: $registrationVM.confirmPW)
 
             TextField("brand name", text: $registrationVM.brandName).textFieldStyle()
         }

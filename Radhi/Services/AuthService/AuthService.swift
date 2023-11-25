@@ -9,8 +9,6 @@ import Foundation
 import SwiftUI
 import Combine
 
-
-
 struct AuthService {
 
     var apiSession = APISession()
@@ -18,8 +16,8 @@ struct AuthService {
     func login() -> AnyPublisher<LoginResponse, NetworkError> {
         var loginRequest = LoginRequest()
         return apiSession.request(with: loginRequest.setupRequest() as! RequestBuilder, test: "")
-                .eraseToAnyPublisher()
-        }
+            .eraseToAnyPublisher()
+    }
     func register() {
 
     }

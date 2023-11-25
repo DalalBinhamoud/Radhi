@@ -16,8 +16,9 @@ extension APIEndpoint: RequestBuilder {
     var urlRequest: URLRequest {
         switch self {
         case .userLogin(let email, let password):
-             guard let url = URL(string: "https://jcouserapidev.oxxo.co.id/home/app")
-                else {preconditionFailure("Invalid URL format")}
+            guard let url = URL(string: "https://jcouserapidev.oxxo.co.id/home/app") else {
+                preconditionFailure("Invalid URL format")
+            }
             var request = URLRequest(url: url)
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             request.setValue("Constants.API_TOKEN", forHTTPHeaderField: "Authorization")

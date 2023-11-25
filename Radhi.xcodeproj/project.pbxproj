@@ -16,7 +16,6 @@
 		E42B58CB2B10911A00FCC9B3 /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58CA2B10911A00FCC9B3 /* ButtonExtension.swift */; };
 		E42B58CE2B1093C300FCC9B3 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58CD2B1093C300FCC9B3 /* AuthService.swift */; };
 		E42B58D02B10A9E900FCC9B3 /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58CF2B10A9E900FCC9B3 /* APISession.swift */; };
-		E42B58D22B10AA6600FCC9B3 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58D12B10AA6600FCC9B3 /* APIEndpoint.swift */; };
 		E42B58D82B10AB3400FCC9B3 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58D72B10AB3400FCC9B3 /* LoginRequest.swift */; };
 		E42B58DB2B10B67000FCC9B3 /* HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58DA2B10B67000FCC9B3 /* HttpMethods.swift */; };
 		E42B58DD2B10BB7600FCC9B3 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58DC2B10BB7600FCC9B3 /* LoginResponse.swift */; };
@@ -60,7 +59,6 @@
 		E42B58CA2B10911A00FCC9B3 /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 		E42B58CD2B1093C300FCC9B3 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E42B58CF2B10A9E900FCC9B3 /* APISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
-		E42B58D12B10AA6600FCC9B3 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		E42B58D72B10AB3400FCC9B3 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		E42B58DA2B10B67000FCC9B3 /* HttpMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethods.swift; sourceTree = "<group>"; };
 		E42B58DC2B10BB7600FCC9B3 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -203,7 +201,6 @@
 				E42B58D92B10B65700FCC9B3 /* ApiHelpers */,
 				E42B58D42B10AAE800FCC9B3 /* AuthService */,
 				E42B58CF2B10A9E900FCC9B3 /* APISession.swift */,
-				E42B58D12B10AA6600FCC9B3 /* APIEndpoint.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -490,7 +487,6 @@
 				E487FE872A2B80840046D0FB /* ColorExtension.swift in Sources */,
 				E42B58CB2B10911A00FCC9B3 /* ButtonExtension.swift in Sources */,
 				E42B58C92B108D6B00FCC9B3 /* CustomAlert.swift in Sources */,
-				E42B58D22B10AA6600FCC9B3 /* APIEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

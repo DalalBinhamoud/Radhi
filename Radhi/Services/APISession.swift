@@ -24,11 +24,8 @@ protocol APIService {
     func request<T: Decodable>(with builder: RequestBuilder, test: String) -> AnyPublisher<T, NetworkError>
 }
 
-
-
-
 struct APISession: APIService {
-    func request<T>(with builder: RequestBuilder, test: String) -> AnyPublisher<T, NetworkError> where T : Decodable {
+    func request<T>(with builder: RequestBuilder, test: String) -> AnyPublisher<T, NetworkError> where T: Decodable {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
 
