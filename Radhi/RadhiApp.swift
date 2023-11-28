@@ -20,7 +20,9 @@ struct RadhiApp: App {
                  .navigationDestination(for: Router.Routes.self) { route in
                      switch route {
                      case .register:
-                         RegistrationView()
+                         RegistrationView(
+                            registerVM: .init(router: router)
+                         )
                              .withCustomBackButton(title: NSLocalizedString("register", comment: ""), router)
                      case .login:
                          LoginView(selectedLanguage: $selectedLanguage)

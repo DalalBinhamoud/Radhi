@@ -11,7 +11,11 @@ struct RegistrationView: View {
 
     // MARK: Properties
 
-    @ObservedObject  var registerVM = RegistrationViewModel()
+    @ObservedObject  var registerVM: RegistrationViewModel
+
+    init(registerVM: RegistrationViewModel) {
+        self.registerVM = registerVM
+    }
 
     var body: some View {
         ScrollView {
@@ -20,19 +24,20 @@ struct RegistrationView: View {
 
                     fields
 
-                    // MARK: number of emojis
-                    Text("num_of_emogis").foregroundColor(.white)
-                    Picker("num_of_emogis",
-                        selection: $registerVM.numOfEmojis) {
-                        Text("3")
-                        Text("5")
-                    }.pickerStyle(.segmented).background(Constants.Colors.label)
-
                     // MARK: Color picker
                     ColorPicker("select_primary_brand_color", selection: $registerVM.selectedPrimaryColor)
                         .foregroundColor(Constants.Colors.label)
                     ColorPicker("select_secondary_brand_color", selection: $registerVM.selectedSecondaryColor)
                         .foregroundColor(Constants.Colors.label)
+
+                    // MARK: number of emojis
+                    HStack {
+                        Text("num_of_emogis").foregroundColor(.white)
+                            .font(Font.headline)
+                        RadioButtonGroup(selectedId: registerVM.numOfEmojis) { selected in
+                            registerVM.numOfEmojis = selected
+                        }
+                    }
 
                     // MARK: Action Button
                     registerButton()
@@ -84,6 +89,6 @@ struct RegistrationView: View {
 
 struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {
-        RegistrationView()
+        RegistrationView(registerVM: RegistrationViewModel(router: Router()))
     }
 }

@@ -20,6 +20,8 @@
 		E42B58DB2B10B67000FCC9B3 /* HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58DA2B10B67000FCC9B3 /* HttpMethods.swift */; };
 		E42B58DD2B10BB7600FCC9B3 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58DC2B10BB7600FCC9B3 /* LoginResponse.swift */; };
 		E42B58DF2B10BE9A00FCC9B3 /* swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E42B58DE2B10BE9A00FCC9B3 /* swiftlint.yml */; };
+		E447042A2B16283B00C8B38D /* CustomRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44704292B16283A00C8B38D /* CustomRadioButton.swift */; };
+		E447042C2B1628D200C8B38D /* RadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447042B2B1628D200C8B38D /* RadioButtonGroup.swift */; };
 		E47CA6D62B10C5BA001AD1BE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E47CA6D52B10C5BA001AD1BE /* .swiftlint.yml */; };
 		E47CA6D82B11E7CE001AD1BE /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47CA6D72B11E7CE001AD1BE /* CustomBackButton.swift */; };
 		E47CA6DA2B121901001AD1BE /* CustomRequiredTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47CA6D92B121901001AD1BE /* CustomRequiredTextField.swift */; };
@@ -65,6 +67,8 @@
 		E42B58DA2B10B67000FCC9B3 /* HttpMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethods.swift; sourceTree = "<group>"; };
 		E42B58DC2B10BB7600FCC9B3 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		E42B58DE2B10BE9A00FCC9B3 /* swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
+		E44704292B16283A00C8B38D /* CustomRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRadioButton.swift; sourceTree = "<group>"; };
+		E447042B2B1628D200C8B38D /* RadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonGroup.swift; sourceTree = "<group>"; };
 		E47CA6D52B10C5BA001AD1BE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		E47CA6D72B11E7CE001AD1BE /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
 		E47CA6D92B121901001AD1BE /* CustomRequiredTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRequiredTextField.swift; sourceTree = "<group>"; };
@@ -324,6 +328,8 @@
 				E42B58C82B108D6B00FCC9B3 /* CustomAlert.swift */,
 				E47CA6D72B11E7CE001AD1BE /* CustomBackButton.swift */,
 				E47CA6D92B121901001AD1BE /* CustomRequiredTextField.swift */,
+				E44704292B16283A00C8B38D /* CustomRadioButton.swift */,
+				E447042B2B1628D200C8B38D /* RadioButtonGroup.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -478,6 +484,7 @@
 				E410FA4E2AE2E19A00F2B8F0 /* DashboardView.swift in Sources */,
 				E487FE972A2B94F80046D0FB /* RegistrationViewModel.swift in Sources */,
 				E42B58CE2B1093C300FCC9B3 /* AuthService.swift in Sources */,
+				E447042C2B1628D200C8B38D /* RadioButtonGroup.swift in Sources */,
 				E487FE892A2B822E0046D0FB /* LoginView.swift in Sources */,
 				E487FE952A2B84A80046D0FB /* LoginViewModel.swift in Sources */,
 				E487FE912A2B83730046D0FB /* TextExtension.swift in Sources */,
@@ -486,6 +493,7 @@
 				E487FE992A2B95E40046D0FB /* Branch.swift in Sources */,
 				E42B58D82B10AB3400FCC9B3 /* LoginRequest.swift in Sources */,
 				E487FE812A2B80160046D0FB /* RegistrationView.swift in Sources */,
+				E447042A2B16283B00C8B38D /* CustomRadioButton.swift in Sources */,
 				E487FE8F2A2B82CD0046D0FB /* Util.swift in Sources */,
 				E47CA6DA2B121901001AD1BE /* CustomRequiredTextField.swift in Sources */,
 				E410FA492AE2DD2A00F2B8F0 /* Router.swift in Sources */,

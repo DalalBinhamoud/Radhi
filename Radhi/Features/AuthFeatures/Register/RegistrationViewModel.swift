@@ -15,7 +15,7 @@ class RegistrationViewModel: ObservableObject {
     @Published var password = ""
     @Published var confirmPW = ""
     @Published var brandName = ""
-    @Published var numOfEmojis = 3
+    @Published var numOfEmojis = "3"
     @Published var selectedPrimaryColor = Color(.sRGB, red: 0.0, green: 0.0, blue: 0.0)
     @Published var selectedSecondaryColor = Color(.sRGB, red: 0.0, green: 0.0, blue: 0.0)
 
@@ -32,6 +32,13 @@ class RegistrationViewModel: ObservableObject {
     @Published var showError = false
     @Published var errorMessage = ""
 
+    private var router: Router
+
+
+    init(router: Router) {
+        self.router = router
+    }
+
     var areRequiredFieldsEmpty: Bool {
         [email, password, confirmPW, brandName ].contains(where: \.isEmpty)
     }
@@ -46,5 +53,7 @@ class RegistrationViewModel: ObservableObject {
 
     func register() {
         // TODO: call registration service
+        // TODO: if there are multiple branches direct the user to another screen
+        router.push(to: .dashboard)
     }
 }
