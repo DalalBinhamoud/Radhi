@@ -21,17 +21,14 @@ struct RadhiApp: App {
                      switch route {
                      case .register:
                          RegistrationView(
-                            registerVM: .init(router: router)
+                        registerVM: .init(router: router)
                          )
                              .withCustomBackButton(title: NSLocalizedString("register", comment: ""), router)
                      case .login:
                          LoginView(selectedLanguage: $selectedLanguage)
-                     case .submitReview:
-                         SubmitReviewView()
-                     case .dashboard:
-                         DashboardView()
-                     case .branhces:
-                         Text("Comming Soon!")
+                     case .home:
+                         HomeView(currentTab: .dashboard)
+                             .environmentObject(router)
                      }
                  }
              }

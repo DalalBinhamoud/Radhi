@@ -20,8 +20,11 @@
 		E42B58DB2B10B67000FCC9B3 /* HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58DA2B10B67000FCC9B3 /* HttpMethods.swift */; };
 		E42B58DD2B10BB7600FCC9B3 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B58DC2B10BB7600FCC9B3 /* LoginResponse.swift */; };
 		E42B58DF2B10BE9A00FCC9B3 /* swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E42B58DE2B10BE9A00FCC9B3 /* swiftlint.yml */; };
+		E43D73E12B1B884C00821114 /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43D73E02B1B884C00821114 /* StyleGuide.swift */; };
 		E447042A2B16283B00C8B38D /* CustomRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44704292B16283A00C8B38D /* CustomRadioButton.swift */; };
 		E447042C2B1628D200C8B38D /* RadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447042B2B1628D200C8B38D /* RadioButtonGroup.swift */; };
+		E447042F2B16347D00C8B38D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447042E2B16347D00C8B38D /* HomeView.swift */; };
+		E44704312B1638D600C8B38D /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44704302B1638D600C8B38D /* CustomTabBar.swift */; };
 		E47CA6D62B10C5BA001AD1BE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E47CA6D52B10C5BA001AD1BE /* .swiftlint.yml */; };
 		E47CA6D82B11E7CE001AD1BE /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47CA6D72B11E7CE001AD1BE /* CustomBackButton.swift */; };
 		E47CA6DA2B121901001AD1BE /* CustomRequiredTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47CA6D92B121901001AD1BE /* CustomRequiredTextField.swift */; };
@@ -67,8 +70,11 @@
 		E42B58DA2B10B67000FCC9B3 /* HttpMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethods.swift; sourceTree = "<group>"; };
 		E42B58DC2B10BB7600FCC9B3 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		E42B58DE2B10BE9A00FCC9B3 /* swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
+		E43D73E02B1B884C00821114 /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
 		E44704292B16283A00C8B38D /* CustomRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRadioButton.swift; sourceTree = "<group>"; };
 		E447042B2B1628D200C8B38D /* RadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonGroup.swift; sourceTree = "<group>"; };
+		E447042E2B16347D00C8B38D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E44704302B1638D600C8B38D /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		E47CA6D52B10C5BA001AD1BE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		E47CA6D72B11E7CE001AD1BE /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
 		E47CA6D92B121901001AD1BE /* CustomRequiredTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRequiredTextField.swift; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 		E410FA512AE2EEB000F2B8F0 /* HomeFeatures */ = {
 			isa = PBXGroup;
 			children = (
+				E447042D2B16346600C8B38D /* HomeView */,
 				E410FA552AE2EEDE00F2B8F0 /* SubmitReview */,
 				E410FA542AE2EED700F2B8F0 /* Dashboard */,
 			);
@@ -247,6 +254,14 @@
 			path = ApiHelpers;
 			sourceTree = "<group>";
 		};
+		E447042D2B16346600C8B38D /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				E447042E2B16347D00C8B38D /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
 		E487FE622A24880D0046D0FB = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +321,7 @@
 			children = (
 				E487FE832A2B80510046D0FB /* Constants.swift */,
 				E487FE8E2A2B82CD0046D0FB /* Util.swift */,
+				E43D73E02B1B884C00821114 /* StyleGuide.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -330,6 +346,7 @@
 				E47CA6D92B121901001AD1BE /* CustomRequiredTextField.swift */,
 				E44704292B16283A00C8B38D /* CustomRadioButton.swift */,
 				E447042B2B1628D200C8B38D /* RadioButtonGroup.swift */,
+				E44704302B1638D600C8B38D /* CustomTabBar.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -477,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E447042F2B16347D00C8B38D /* HomeView.swift in Sources */,
 				E42B58DB2B10B67000FCC9B3 /* HttpMethods.swift in Sources */,
 				E487FE932A2B84240046D0FB /* CustomPasswordField.swift in Sources */,
 				E42B58DD2B10BB7600FCC9B3 /* LoginResponse.swift in Sources */,
@@ -492,6 +510,7 @@
 				E47CA6D82B11E7CE001AD1BE /* CustomBackButton.swift in Sources */,
 				E487FE992A2B95E40046D0FB /* Branch.swift in Sources */,
 				E42B58D82B10AB3400FCC9B3 /* LoginRequest.swift in Sources */,
+				E44704312B1638D600C8B38D /* CustomTabBar.swift in Sources */,
 				E487FE812A2B80160046D0FB /* RegistrationView.swift in Sources */,
 				E447042A2B16283B00C8B38D /* CustomRadioButton.swift in Sources */,
 				E487FE8F2A2B82CD0046D0FB /* Util.swift in Sources */,
@@ -501,6 +520,7 @@
 				E410FA4C2AE2E18900F2B8F0 /* SubmitReviewView.swift in Sources */,
 				E487FE842A2B80510046D0FB /* Constants.swift in Sources */,
 				E487FE872A2B80840046D0FB /* ColorExtension.swift in Sources */,
+				E43D73E12B1B884C00821114 /* StyleGuide.swift in Sources */,
 				E42B58CB2B10911A00FCC9B3 /* ButtonExtension.swift in Sources */,
 				E42B58C92B108D6B00FCC9B3 /* CustomAlert.swift in Sources */,
 			);

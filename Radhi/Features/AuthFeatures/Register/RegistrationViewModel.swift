@@ -54,6 +54,6 @@ class RegistrationViewModel: ObservableObject {
     func register() {
         // TODO: call registration service
         // TODO: if there are multiple branches direct the user to another screen
-        router.push(to: .dashboard)
+        router.push(to: .home(.dashboard))
     }
 }

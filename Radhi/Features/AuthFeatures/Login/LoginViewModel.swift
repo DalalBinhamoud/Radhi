@@ -44,7 +44,7 @@ class LoginViewModel: ObservableObject {
 
     func login() {
         // TODO: call logoin function
-        self.router?.push(to: .dashboard)
+        self.router?.push(to: .home(.dashboard))
     }
 
     func tapToRegister() {

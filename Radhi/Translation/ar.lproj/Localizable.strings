@@ -43,6 +43,7 @@
 "review_status" = "حالة التقييم";
 "review_contact" = "رقم التواصل";
 "review_date" = "تاريخ التقييم";
+"dashboard" = "لوحة المعلومات";
 
 // validation
 "email_validation" = "الرجاء إدخال بريد إلكتروني صحيح";

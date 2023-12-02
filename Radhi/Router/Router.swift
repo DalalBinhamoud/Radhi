@@ -13,9 +13,7 @@ final class Router: ObservableObject {
     public enum Routes: Codable, Hashable {
         case login
         case register
-        case submitReview
-        case dashboard
-        case branhces
+        case home(HomeRoutes)
     }
 
     @Published var navPath = NavigationPath()
@@ -31,4 +29,17 @@ final class Router: ObservableObject {
     func popToRoot() {
         navPath.removeLast(navPath.count)
     }
+
+    func replaceRootWith(_ route: Routes) {
+        popToRoot()
+        navPath.append(route)
+    }
+}
+
+extension Router {
+    public enum HomeRoutes: Codable, Hashable, Equatable {
+        case dashboard
+        case submitReview
+    }
+
 }

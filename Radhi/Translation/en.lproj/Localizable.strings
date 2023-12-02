@@ -43,6 +43,7 @@
 "review_status" = "Review Status";
 "review_contact" = "Contact number";
 "review_date" = "Review Date";
+"dashboard" = "Dashboard";
 
 // validation
 "email_validation" = "Please enter a valid email";

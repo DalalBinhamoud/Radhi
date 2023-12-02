@@ -23,7 +23,7 @@ import SwiftUI
             TextField(LocalizedStringKey(label ?? ""), text: $text)
                 .textFieldStyle()
                 .onChange(of: text) {_ in
-                    //TODO: only show the error when user left the focus on field
+                    // TODO: only show the error when user left the focus on field
                     showError = text.isEmpty
                 }
             showtextError()
