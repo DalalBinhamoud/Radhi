@@ -35,7 +35,7 @@ import SwiftUI
     func showtextError() -> some View {
         if showError {
             Text("required_field")
-                .foregroundColor(Constants.Colors.errorColor).padding(5)
+                .foregroundColor(Constants.Colors.error).padding(StyleGuide.Padding.small)
         }
     }
 }

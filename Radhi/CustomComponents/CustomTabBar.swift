@@ -52,7 +52,7 @@ struct CustomTabBar: View {
                     .fontWeight(isSelected ? .bold : .regular)
             }
             .padding(StyleGuide.Padding.large)
-            .foregroundColor(isSelected ? Constants.Colors.primaryColor: Constants.Colors.secondaryColor)
+            .foregroundColor(isSelected ? Constants.Colors.primary : Constants.Colors.secondary)
 
         }
     }

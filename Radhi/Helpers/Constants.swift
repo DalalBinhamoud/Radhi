@@ -10,11 +10,11 @@ import SwiftUI
 
 struct Constants {
     enum Colors {
-        static let primaryColor = Color(red: 0.73, green: 0.58, blue: 0.16)
-        static let ligthColor = Color(red: 0.93, green: 0.93, blue: 0.93)
-        static let  secondaryColor = Color(red: 0.01568627450980392, green: 0.1411764705882353, blue: 0.29411764705882354)
+        static let primary = Color(red: 0.73, green: 0.58, blue: 0.16)
+        static let  secondary = Color(red: 0.01568627450980392, green: 0.1411764705882353, blue: 0.29411764705882354)
+        static let light = Color(red: 0.93, green: 0.93, blue: 0.93)
         static let label = Color.white
-        static let errorColor = Color.red
+        static let error = Color.red
     }
 
     enum MaxLength {

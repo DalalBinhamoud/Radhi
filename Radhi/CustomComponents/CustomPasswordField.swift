@@ -48,7 +48,7 @@ struct CustomPasswordField: View {
                     showPassword.toggle()
                 } label: {
                     Image(systemName: showPassword ? "eye" : "eye.slash").imageScale(.large)
-                }.padding(.horizontal, 25)
+                }.padding(.horizontal, StyleGuide.Padding.large)
             }
             showPasswordError()
         }
@@ -72,7 +72,7 @@ struct CustomPasswordField: View {
     func showPasswordError() -> some View {
         if showError {
             Text(LocalizedStringKey(passwordType == .regular ? "password_error" : "confirm_password_error"))
-                .foregroundColor(Constants.Colors.errorColor).padding(5)
+                .foregroundColor(Constants.Colors.error).padding(StyleGuide.Padding.small)
         }
     }
 

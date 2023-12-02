@@ -30,7 +30,7 @@ struct CustomEmailField: View {
     func showEmailError() -> some View {
         if showError {
             Text("email_validation")
-                .foregroundColor(Constants.Colors.errorColor).padding(5)
+                .foregroundColor(Constants.Colors.error).padding(StyleGuide.Padding.small)
         }
     }
 }

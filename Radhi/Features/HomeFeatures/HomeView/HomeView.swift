@@ -19,7 +19,7 @@ struct HomeView: View {
                 CustomTabBar(currentTap: $currentTab)
 
             }
-            .background(Constants.Colors.ligthColor)
+            .background(Constants.Colors.light)
             .onChange(of: currentTab) {
                 router.replaceRootWith(.home($0))
             }

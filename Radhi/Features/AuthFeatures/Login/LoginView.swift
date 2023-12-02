@@ -35,7 +35,7 @@ struct LoginView: View {
 
                 }.padding()
             }
-            .background(Constants.Colors.secondaryColor)
+            .background(Constants.Colors.secondary)
 
             .alert("error", isPresented: $loginVM.showError) {
                 Button("close") { }
@@ -43,7 +43,7 @@ struct LoginView: View {
                 Text(loginVM.errorMsg)
             }
         }
-        .background(Constants.Colors.secondaryColor)
+        .background(Constants.Colors.secondary)
         .onAppear {
             // TODO: Avoid memory leaking
             self.loginVM.setup(self.router)

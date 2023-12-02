@@ -43,7 +43,7 @@ struct RegistrationView: View {
                     registerButton()
                 }.padding()
             }
-        }.background(Constants.Colors.secondaryColor)
+        }.background(Constants.Colors.secondary)
     }
 
     @ViewBuilder
